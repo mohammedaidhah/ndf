@@ -81,7 +81,21 @@ const translations = {
         "sdg_13": "Climate Action",
         "sdg_13_desc": "Supporting farmers with solar energy and promoting environmental sustainability.",
         "sdg_17": "Partnerships for the Goals",
-        "sdg_17_desc": "Building strategic partnerships with local and international organizations."
+        "sdg_17_desc": "Building strategic partnerships with local and international organizations.",
+        "resp_title": "Humanitarian Response & Emergency Interventions",
+        "resp_desc": "In response to ongoing crises, we focus our efforts on meeting life-saving basic needs according to the Yemen Humanitarian Response Plan, ensuring support reaches those affected.",
+        "resp_btn": "Discover Our Impact",
+        "chart_food": "Food Security",
+        "chart_health": "Health & Water",
+        "chart_edu": "Education & Protection",
+        "resp_impact": "Our Real-World Impact",
+        "resp_impact_desc": "With a high rating in transparency and response speed, we are committed to maximizing the impact of every donation to alleviate suffering in the hardest-hit areas. Thanks to your support, we achieved immediate response for over 500,000 beneficiaries last year.",
+        "partners_title": "Partners in Humanity",
+        "partner_un": "UN Agencies",
+        "partner_ksrelief": "KSrelief",
+        "partner_directaid": "Direct Aid Society",
+        "partner_global": "Global Relief Agencies",
+        "partner_local": "Local Development Partners"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -165,7 +179,21 @@ const translations = {
         "sdg_13": "العمل المناخي",
         "sdg_13_desc": "دعم المزارعين بالطاقة الشمسية وتشجيع الاستدامة البيئية.",
         "sdg_17": "عقد الشراكات لتحقيق الأهداف",
-        "sdg_17_desc": "بناء شراكات استراتيجية مع المنظمات المحلية والدولية."
+        "sdg_17_desc": "بناء شراكات استراتيجية مع المنظمات المحلية والدولية.",
+        "resp_title": "الإستجابة الإنسانية والتدخلات الطارئة",
+        "resp_desc": "استجابةً للأزمات المستمرة، نركز جهودنا على تلبية الاحتياجات الأساسية المنقذة للحياة وفق خطة الاستجابة الإنسانية لليمن، لضمان وصول الدعم للمتضررين.",
+        "resp_btn": "تعرف على أثرنا",
+        "chart_food": "الأمن الغذائي",
+        "chart_health": "الصحة والمياه",
+        "chart_edu": "التعليم والحماية",
+        "resp_impact": "أثرنا على أرض الواقع",
+        "resp_impact_desc": "من خلال تصنيف عالي في معايير الشفافية وسرعة الاستجابة، نحن ملتزمون بتعظيم أثر كل تبرع يصلنا لتخفيف المعاناة في المناطق الأشد تضرراً. بفضل دعمكم، حققنا استجابة فورية لأكثر من 500,000 مستفيد خلال العام الماضي.",
+        "partners_title": "شركاء الإنسانية",
+        "partner_un": "منظمات الأمم المتحدة",
+        "partner_ksrelief": "مركز الملك سلمان للإغاثة",
+        "partner_directaid": "جمعية العون المباشر",
+        "partner_global": "هيئات الإغاثة العالمية",
+        "partner_local": "شركاء التنمية المحليين"
     }
 };
 
