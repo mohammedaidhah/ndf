@@ -59,7 +59,7 @@ const translations = {
         "ft_contact": "Contact Us",
         "ft_loc": "Hadhramaut - Mukalla",
         "ft_follow": "Follow Us",
-        "ft_copy": "All rights reserved © 2026 Nahd Developmental Foundation (NDF). UI/UX Prototype.",
+        "ft_copy": "All rights reserved © 2026 Nahd Developmental Foundation (NDF). UI/UX Abu Rayan.",
         "sdg_title": "Our Sustainable Interventions",
         "sdg_desc": "At Nahd Developmental Foundation, we are committed to aligning our projects with the UN Sustainable Development Goals (SDGs) to help build a better and more sustainable future for all.",
         "sdg_1": "No Poverty",
@@ -95,7 +95,9 @@ const translations = {
         "partner_ksrelief": "KSrelief",
         "partner_directaid": "Direct Aid Society",
         "partner_global": "Global Relief Agencies",
-        "partner_local": "Local Development Partners"
+        "partner_local": "Local Development Partners",
+        "ig_desc": "Follow us on Instagram to see the latest photos and stories from the field.",
+        "ig_btn": "Follow Account"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -157,7 +159,7 @@ const translations = {
         "ft_contact": "تواصل معنا",
         "ft_loc": "حضرموت - المكلا",
         "ft_follow": "تابعنا",
-        "ft_copy": "جميع الحقوق محفوظة © 2026 مؤسسة نهد التنموية (NDF). تصميم مقترح لتجربة مستخدم حديثة.",
+        "ft_copy": "جميع الحقوق محفوظة © 2026 مؤسسة نهد التنموية (NDF). UI/UX Abu Rayan.",
         "sdg_title": "تدخلاتنا المستدامة",
         "sdg_desc": "نلتزم في مؤسسة نهد التنموية بمواءمة تدخلاتنا ومشاريعنا مع أهداف التنمية المستدامة (SDGs) التابعة للأمم المتحدة، مساهمةً منا في بناء مستقبل أفضل وأكثر استدامة للجميع.",
         "sdg_1": "القضاء على الفقر",
@@ -193,9 +195,13 @@ const translations = {
         "partner_ksrelief": "مركز الملك سلمان للإغاثة",
         "partner_directaid": "جمعية العون المباشر",
         "partner_global": "هيئات الإغاثة العالمية",
-        "partner_local": "شركاء التنمية المحليين"
+        "partner_local": "شركاء التنمية المحليين",
+        "ig_desc": "تابعنا على انستقرام لمشاهدة أحدث الصور والقصص من الميدان.",
+        "ig_btn": "متابعة الحساب"
     }
 };
+
+let currentLang = localStorage.getItem('lang') || 'en';
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Header
@@ -272,28 +278,33 @@ document.addEventListener('DOMContentLoaded', () => {
     revealOnScroll(); // Trigger once on load
 
     // 4. Language Translation Logic
-    let currentLang = 'ar';
     const langToggleBtn = document.getElementById('langToggle');
 
-    langToggleBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
         
         // Change document direction and lang
-        document.documentElement.lang = currentLang;
-        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
         
+        // Update toggle button text
+        const langText = langToggleBtn.querySelector('.lang-text');
+        if (langText) {
+            langText.textContent = lang === 'ar' ? 'EN' : 'AR';
+        }
+
         // Translate text elements
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
-            if (translations[currentLang][key]) {
-                el.textContent = translations[currentLang][key];
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
             }
         });
 
         // Swap arrow direction classes
         document.querySelectorAll('.arrow-icon').forEach(icon => {
-            if(currentLang === 'en') {
+            if(lang === 'en') {
                 icon.classList.remove('fa-arrow-left');
                 icon.classList.add('fa-arrow-right');
             } else {
@@ -303,8 +314,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Re-trigger scroll animations manually so layout fixes itself if needed
-        revealOnScroll();
-    });
+        if (typeof revealOnScroll === 'function') {
+            revealOnScroll();
+        }
+    }
+
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        });
+    }
+
+    // Initialize language on load
+    setLanguage(currentLang);
 
     // 5. Hero Mouse Parallax Effect
     const hero = document.getElementById('hero');
