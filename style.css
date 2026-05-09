@@ -238,6 +238,36 @@ header.scrolled .mobile-menu-toggle {
     align-items: center;
 }
 
+.header-icon-btn {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.header-icon-btn:hover {
+    background: var(--white);
+    color: var(--accent-color);
+}
+
+header.scrolled .header-icon-btn {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+header.scrolled .header-icon-btn:hover {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -975,15 +1005,32 @@ footer {
         display: none;
     }
     
-    .lang-btn {
-        padding: 0 !important;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
+    .header-icon-btn {
+        border: none;
+        padding: 0;
+        font-size: 1.5rem;
+        border-radius: 0;
+    }
+    
+    .header-icon-btn:hover {
+        background: transparent;
+        color: var(--secondary-color);
+    }
+    
+    header.scrolled .header-icon-btn:hover {
+        background: transparent;
+        color: var(--secondary-color);
+    }
+    
+    .nav-actions {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        min-width: unset;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        height: 60px; /* Make logo slightly smaller on mobile to ensure room for icons */
     }
 
     .hero h1 { font-size: 2.5rem; }
