@@ -20,11 +20,6 @@
                 </a>
             </div>
             
-            <!-- Mobile Menu Toggle Button -->
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
@@ -37,10 +32,19 @@
                     <li><a href="#" data-translate="nav_media">المركز الإعلامي</a></li>
                     <li><a href="#" data-translate="nav_contact">اتصل بنا</a></li>
                 </ul>
+                
+                <div class="mobile-donate" style="display: none; width: 100%; margin-top: 20px;">
+                    <a href="#" class="btn btn-accent" style="width: 100%; text-align: center; display: block;"><i class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
+                </div>
+            </div>
 
-                <div class="nav-actions">
-                    <button id="langToggle" class="btn btn-outline" style="padding: 10px 15px; font-weight: 800; font-family: sans-serif;"><i class="fa-solid fa-globe"></i> <span data-translate="lang_btn">EN</span></button>
-                    <a href="#" class="btn btn-accent"><i class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
+            <div class="nav-actions">
+                <button id="langToggle" class="btn btn-outline lang-btn" style="padding: 8px 15px; font-weight: 800; font-family: sans-serif;"><i class="fa-solid fa-globe"></i> <span class="lang-text" data-translate="lang_btn">EN</span></button>
+                <a href="#" class="btn btn-accent desktop-donate"><i class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
+                
+                <!-- Mobile Menu Toggle Button -->
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
