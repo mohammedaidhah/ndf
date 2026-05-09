@@ -168,10 +168,46 @@ header.scrolled .logo-img {
     filter: none; /* إظهار الألوان الحقيقية للشعار على الشريط الأبيض */
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
     align-items: center;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+header.scrolled .mobile-menu-toggle {
+    color: var(--accent-color);
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-links a {
@@ -874,7 +910,68 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; } 
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 30px 40px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* RTL Support */
+    html[dir="ltr"] .nav-menu {
+        right: auto;
+        left: -100%;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        transition: left 0.4s ease;
+    }
+    
+    html[dir="ltr"] .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .nav-actions .btn {
+        width: 100%;
+    }
+
     .hero h1 { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; }
     .impact-section { margin-top: 0; border-radius: 0; }

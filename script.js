@@ -250,4 +250,38 @@ document.addEventListener('DOMContentLoaded', () => {
             heroBgWrapper.style.transform = `translate(0, 0)`;
         });
     }
+
+    // 6. Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+    if (mobileMenuToggle && navMenu && mobileMenuOverlay) {
+        const toggleMenu = () => {
+            navMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            // Toggle icon between bars and times (close)
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        };
+
+        mobileMenuToggle.addEventListener('click', toggleMenu);
+        mobileMenuOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    }
 });
