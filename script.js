@@ -260,14 +260,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const toggleMenu = () => {
             navMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
-            // Toggle icon between bars and times (close)
-            const icon = mobileMenuToggle.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            // Toggle SVG icons
+            const iconBars = mobileMenuToggle.querySelector('.icon-bars');
+            const iconClose = mobileMenuToggle.querySelector('.icon-close');
+            if (iconBars && iconClose) {
+                if (navMenu.classList.contains('active')) {
+                    iconBars.style.display = 'none';
+                    iconClose.style.display = 'block';
+                } else {
+                    iconBars.style.display = 'block';
+                    iconClose.style.display = 'none';
+                }
             }
         };
 
