@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة نهد التنموية | نحو تنمية مجتمعية مستدامة</title>
-    <meta name="description" content="مؤسسة نهد التنموية هي منظمة يمنية غير ربحية تعمل في مجالات الصحة والتعليم والأمن الغذائي لتمكين المجتمعات الضعيفة.">
+    <meta name="description"
+        content="مؤسسة نهد التنموية هي منظمة يمنية غير ربحية تعمل في مجالات الصحة والتعليم والأمن الغذائي لتمكين المجتمعات الضعيفة.">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons (CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Header & Navigation -->
@@ -16,10 +19,12 @@
         <div class="container navbar">
             <div class="logo">
                 <a href="#">
-                    <img id="main-logo" src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="NDF Logo" class="logo-img">
+                    <img id="main-logo"
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="NDF Logo" class="logo-img">
                 </a>
             </div>
-            
+
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
@@ -32,33 +37,44 @@
                     <li><a href="#" data-translate="nav_media">المركز الإعلامي</a></li>
                     <li><a href="#" data-translate="nav_contact">اتصل بنا</a></li>
                 </ul>
-                
+
                 <div class="mobile-donate" style="display: none; width: 100%; margin-top: 20px;">
-                    <a href="#" class="btn btn-accent" style="width: 100%; text-align: center; display: block;"><i class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
+                    <a href="#" class="btn btn-accent" style="width: 100%; text-align: center; display: block;"><i
+                            class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
                 </div>
             </div>
 
             <div class="nav-actions">
                 <button id="langToggle" class="header-icon-btn">
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.84-3.56A15.65 15.65 0 007.54 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.34.16-2h4.68c.09.66.16 1.32.16 2s-.07 1.34-.16 2zm1.8 2h2.95a7.987 7.987 0 01-3.84 3.56A15.65 15.65 0 0016.14 16zm2.95-8h-2.95c-.32-1.25-.78-2.45-1.38-3.56A7.987 7.987 0 0119.09 8zM19.74 14h-3.38c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2z"/>
+                        <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.84-3.56A15.65 15.65 0 007.54 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.34.16-2h4.68c.09.66.16 1.32.16 2s-.07 1.34-.16 2zm1.8 2h2.95a7.987 7.987 0 01-3.84 3.56A15.65 15.65 0 0016.14 16zm2.95-8h-2.95c-.32-1.25-.78-2.45-1.38-3.56A7.987 7.987 0 0119.09 8zM19.74 14h-3.38c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2z" />
                     </svg>
                     <span class="lang-text" data-translate="lang_btn">EN</span>
                 </button>
                 <a href="#" class="btn btn-accent desktop-donate">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-left: 5px; vertical-align: middle;">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
+                        style="margin-left: 5px; vertical-align: middle;">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
                     <span data-translate="nav_donate">تبرع الآن</span>
                 </a>
-                
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                    </svg>
+                </button>
+
                 <!-- Mobile Menu Toggle Button -->
                 <div class="mobile-menu-toggle" id="mobileMenuToggle">
                     <svg class="icon-bars" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                     </svg>
-                    <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="display: none;">
-                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"
+                        style="display: none;">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
                     </svg>
                 </div>
             </div>
@@ -68,14 +84,17 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg-wrapper" id="heroBgWrapper">
-            <div class="hero-bg" style="background-image: url('https://res.cloudinary.com/dca2x8jje/image/upload/f_webp,q_auto/v1778277585/BH6_ho8pdu.jpg');"></div>
+            <div class="hero-bg"
+                style="background-image: url('https://res.cloudinary.com/dca2x8jje/image/upload/f_webp,q_auto/v1778277585/BH6_ho8pdu.jpg');">
+            </div>
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content reveal">
                 <span class="hero-badge" data-translate="hero_badge">معاً نصنع الفارق</span>
                 <h1 data-translate="hero_title">نبني قدرات المجتمع ونصنع أثراً مستداماً</h1>
-                <p data-translate="hero_desc">نعمل في مؤسسة نهد التنموية على تمكين الفئات الضعيفة وبناء مجتمع متماسك وقادر على الصمود من خلال تدخلات تنموية وإنسانية شاملة.</p>
+                <p data-translate="hero_desc">نعمل في مؤسسة نهد التنموية على تمكين الفئات الضعيفة وبناء مجتمع متماسك
+                    وقادر على الصمود من خلال تدخلات تنموية وإنسانية شاملة.</p>
                 <div class="hero-buttons">
                     <a href="#" class="btn btn-primary" data-translate="hero_btn_1">تعرف على مشاريعنا</a>
                     <a href="#" class="btn btn-outline" data-translate="hero_btn_2">كيف يمكنك المساعدة؟</a>
@@ -91,14 +110,20 @@
                 <div class="impact-item">
                     <h3>+<span class="counter" data-target="3500000">0</span></h3>
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" width="45" height="45" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <svg viewBox="0 0 24 24" width="45" height="45" fill="currentColor">
+                            <path
+                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                        </svg>
                     </div>
                     <p data-translate="stat_1">مستفيد حول اليمن</p>
                 </div>
                 <div class="impact-item">
                     <h3>+<span class="counter" data-target="350">0</span></h3>
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" width="45" height="45" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <svg viewBox="0 0 24 24" width="45" height="45" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
                     </div>
                     <p data-translate="stat_2">مشروع منجز</p>
                 </div>
@@ -107,9 +132,12 @@
                     <div class="impact-icon">
                         <svg viewBox="0 0 24 24" width="45" height="45" fill="currentColor">
                             <!-- Map Path -->
-                            <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" opacity="0.6"/>
+                            <path
+                                d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"
+                                opacity="0.6" />
                             <!-- Pin Path -->
-                            <path d="M12 2C9.24 2 7 4.24 7 7c0 2.85 2.92 7.21 5 9.88 2.11-2.69 5-7 5-9.88 0-2.76-2.24-5-5-5zm0 7.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            <path
+                                d="M12 2C9.24 2 7 4.24 7 7c0 2.85 2.92 7.21 5 9.88 2.11-2.69 5-7 5-9.88 0-2.76-2.24-5-5-5zm0 7.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                         </svg>
                     </div>
                     <p data-translate="stat_3">محافظات مغطاة</p>
@@ -121,7 +149,7 @@
                             <!-- Custom Round Table Meeting Icon -->
                             <!-- Center Table -->
                             <circle cx="12" cy="12" r="3.5" />
-                            
+
                             <!-- Top Partner -->
                             <circle cx="12" cy="2.5" r="1.5" />
                             <path d="M 8.5 6.5 Q 12 4.5 15.5 6.5 Q 12 8 8.5 6.5 Z" />
@@ -150,9 +178,11 @@
         <div class="container">
             <div class="section-header reveal" style="text-align: right; margin-bottom: 20px;">
                 <h2 data-translate="resp_title" style="margin-bottom: 15px;">الإستجابة الإنسانية والتدخلات الطارئة</h2>
-                <p data-translate="resp_desc" style="max-width: 800px; margin: 0;">استجابةً للأزمات المستمرة، نركز جهودنا على تلبية الاحتياجات الأساسية المنقذة للحياة وفق خطة الاستجابة الإنسانية لليمن، لضمان وصول الدعم للمتضررين.</p>
+                <p data-translate="resp_desc" style="max-width: 800px; margin: 0;">استجابةً للأزمات المستمرة، نركز
+                    جهودنا على تلبية الاحتياجات الأساسية المنقذة للحياة وفق خطة الاستجابة الإنسانية لليمن، لضمان وصول
+                    الدعم للمتضررين.</p>
             </div>
-            
+
             <div class="response-content reveal">
                 <div class="response-chart-wrapper">
                     <div class="donut-chart-container">
@@ -160,7 +190,7 @@
                             <div class="donut-inner"></div>
                         </div>
                     </div>
-                    
+
                     <div class="chart-labels">
                         <div class="chart-label">
                             <span class="color-dot" style="background-color: var(--accent-color);"></span>
@@ -185,10 +215,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="response-text">
                     <h3 data-translate="resp_impact">أثرنا على أرض الواقع</h3>
-                    <p data-translate="resp_impact_desc">من خلال تصنيف عالي في معايير الشفافية وسرعة الاستجابة، نحن ملتزمون بتعظيم أثر كل تبرع يصلنا لتخفيف المعاناة في المناطق الأشد تضرراً. بفضل دعمكم، حققنا استجابة فورية لأكثر من 500,000 مستفيد خلال العام الماضي.</p>
+                    <p data-translate="resp_impact_desc">من خلال تصنيف عالي في معايير الشفافية وسرعة الاستجابة، نحن
+                        ملتزمون بتعظيم أثر كل تبرع يصلنا لتخفيف المعاناة في المناطق الأشد تضرراً. بفضل دعمكم، حققنا
+                        استجابة فورية لأكثر من 500,000 مستفيد خلال العام الماضي.</p>
                     <a href="#" class="btn btn-primary" data-translate="resp_btn">تعرف على أثرنا</a>
                 </div>
             </div>
@@ -200,71 +232,92 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-translate="sec_title">قطاعات العمل التنموية</h2>
-                <p data-translate="sec_desc">تتركز جهودنا في أربعة قطاعات حيوية لضمان تلبية الاحتياجات الأساسية وتحقيق التنمية الشاملة للمجتمعات التي نخدمها.</p>
+                <p data-translate="sec_desc">تتركز جهودنا في أربعة قطاعات حيوية لضمان تلبية الاحتياجات الأساسية وتحقيق
+                    التنمية الشاملة للمجتمعات التي نخدمها.</p>
             </div>
-            
+
             <div class="sectors-grid">
                 <!-- Sector 1 -->
                 <div class="sector-card reveal" style="transition-delay: 0.1s;" onclick="window.location.href='#'">
                     <div class="sector-icon">
-                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                            <path
+                                d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z" />
+                        </svg>
                     </div>
                     <h3 data-translate="sec_1_title">الصحة</h3>
-                    <p data-translate="sec_1_desc">دعم المرافق الصحية، توفير الأدوية الأساسية، وتنفيذ القوافل الطبية للمناطق النائية.</p>
+                    <p data-translate="sec_1_desc">دعم المرافق الصحية، توفير الأدوية الأساسية، وتنفيذ القوافل الطبية
+                        للمناطق النائية.</p>
                     <div class="card-action">
                         <span class="action-circle">
-                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </span>
                     </div>
                 </div>
-                
+
                 <!-- Sector 2 -->
                 <div class="sector-card reveal" style="transition-delay: 0.2s;" onclick="window.location.href='#'">
                     <div class="sector-icon">
-                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                            <path
+                                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                        </svg>
                     </div>
                     <h3 data-translate="sec_2_title">التعليم</h3>
-                    <p data-translate="sec_2_desc">بناء وتأهيل المدارس، كفالة الطلاب، وتوفير الحقائب المدرسية لضمان استمرار التعليم.</p>
+                    <p data-translate="sec_2_desc">بناء وتأهيل المدارس، كفالة الطلاب، وتوفير الحقائب المدرسية لضمان
+                        استمرار التعليم.</p>
                     <div class="card-action">
                         <span class="action-circle">
-                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </span>
                     </div>
                 </div>
-                
+
                 <!-- Sector 3 -->
                 <div class="sector-card reveal" style="transition-delay: 0.3s;" onclick="window.location.href='#'">
                     <div class="sector-icon">
-                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 22c5.52 0 10-4.48 10-10 0-4.75-3.32-8.73-7.79-9.74-.68-.15-1.34.33-1.48 1.01-.15.68.33 1.34 1.01 1.48 3.52.8 6.26 3.93 6.26 7.25 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-3.32 2.74-6.45 6.26-7.25.68-.15 1.16-.8 1.01-1.48-.15-.68-.8-1.16-1.48-1.01C4.32 3.27 1 7.25 1 12c0 5.52 4.48 10 10 10zM11 6v7h2V6h-2z"/></svg>
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                            <path
+                                d="M12 22c5.52 0 10-4.48 10-10 0-4.75-3.32-8.73-7.79-9.74-.68-.15-1.34.33-1.48 1.01-.15.68.33 1.34 1.01 1.48 3.52.8 6.26 3.93 6.26 7.25 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-3.32 2.74-6.45 6.26-7.25.68-.15 1.16-.8 1.01-1.48-.15-.68-.8-1.16-1.48-1.01C4.32 3.27 1 7.25 1 12c0 5.52 4.48 10 10 10zM11 6v7h2V6h-2z" />
+                        </svg>
                     </div>
                     <h3 data-translate="sec_3_title">الأمن الغذائي والزراعة</h3>
-                    <p data-translate="sec_3_desc">توزيع السلال الغذائية، ودعم المزارعين بالبذور والمعدات لتعزيز الإنتاج المحلي.</p>
+                    <p data-translate="sec_3_desc">توزيع السلال الغذائية، ودعم المزارعين بالبذور والمعدات لتعزيز الإنتاج
+                        المحلي.</p>
                     <div class="card-action">
                         <span class="action-circle">
-                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </span>
                     </div>
                 </div>
-                
+
                 <!-- Sector 4 -->
                 <div class="sector-card reveal" style="transition-delay: 0.4s;" onclick="window.location.href='#'">
                     <div class="sector-icon">
-                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                            <path
+                                d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                        </svg>
                     </div>
                     <h3 data-translate="sec_4_title">الإيواء والعمل الإنساني</h3>
-                    <p data-translate="sec_4_desc">تقديم المساعدات الإغاثية العاجلة للنازحين والمتضررين من الكوارث الطبيعية والأزمات.</p>
+                    <p data-translate="sec_4_desc">تقديم المساعدات الإغاثية العاجلة للنازحين والمتضررين من الكوارث
+                        الطبيعية والأزمات.</p>
                     <div class="card-action">
                         <span class="action-circle">
-                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
@@ -272,9 +325,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 50px;">
-                <a href="#" class="btn btn-outline" style="border-color: var(--accent-color); color: var(--accent-color);" data-translate="sec_btn">عرض كل القطاعات</a>
+                <a href="#" class="btn btn-outline"
+                    style="border-color: var(--accent-color); color: var(--accent-color);" data-translate="sec_btn">عرض
+                    كل القطاعات</a>
             </div>
         </div>
     </section>
@@ -284,52 +339,63 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-translate="story_title">قصص إنسانية</h2>
-                <p data-translate="story_desc">نؤمن بأن كل رقم في إحصائياتنا يمثل قصة إنسان، وأملاً تحقق. تعرف على الأثر الحقيقي لمشاريعنا على حياة الأفراد.</p>
+                <p data-translate="story_desc">نؤمن بأن كل رقم في إحصائياتنا يمثل قصة إنسان، وأملاً تحقق. تعرف على الأثر
+                    الحقيقي لمشاريعنا على حياة الأفراد.</p>
             </div>
-            
+
             <div class="stories-grid">
                 <div class="story-card reveal" style="transition-delay: 0.1s;">
                     <div class="story-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Success Story" class="story-img">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Success Story" class="story-img">
                         <div class="video-overlay">
                             <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
+                                <path d="M8 5v14l11-7z" />
                             </svg>
                         </div>
                         <span class="story-badge video-badge">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-left: 5px;">
-                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
+                                style="margin-left: 5px;">
+                                <path
+                                    d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
                             </svg>
                             فيديو
                         </span>
                     </div>
                     <div class="story-content">
                         <h3 data-translate="st_1_title">عودة الأمل إلى قرية الوديان</h3>
-                        <p data-translate="st_1_desc">بفضل جهودكم، تمكنا من حفر بئر ارتوازي وفر المياه النقية لأكثر من 500 أسرة كانت تعاني من شح المياه...</p>
+                        <p data-translate="st_1_desc">بفضل جهودكم، تمكنا من حفر بئر ارتوازي وفر المياه النقية لأكثر من
+                            500 أسرة كانت تعاني من شح المياه...</p>
                         <a href="#" class="link-arrow">
-                            <span data-translate="watch_video">شاهد القصة</span> 
+                            <span data-translate="watch_video">شاهد القصة</span>
                             <svg class="arrow-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                             </svg>
                         </a>
                     </div>
                 </div>
                 <div class="story-card reveal" style="transition-delay: 0.2s;">
                     <div class="story-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Success Story" class="story-img">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Success Story" class="story-img">
                         <span class="story-badge text-badge">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-left: 5px;">
-                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
+                                style="margin-left: 5px;">
+                                <path
+                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
                             </svg>
                             مقال
                         </span>
                     </div>
                     <div class="story-content">
                         <h3 data-translate="st_2_title">أحمد يعود لمقاعد الدراسة</h3>
-                        <p data-translate="st_2_desc">تسببت الظروف في انقطاع أحمد عن التعليم، ولكن مع توفير الحقيبة المدرسية وكفالة الطالب، تمكن من استكمال حلمه...</p>
+                        <p data-translate="st_2_desc">تسببت الظروف في انقطاع أحمد عن التعليم، ولكن مع توفير الحقيبة
+                            المدرسية وكفالة الطالب، تمكن من استكمال حلمه...</p>
                         <a href="#" class="link-arrow">
-                            <span data-translate="read_more">اقرأ القصة كاملة</span> 
-                            <svg class="arrow-icon rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <span data-translate="read_more">اقرأ القصة كاملة</span>
+                            <svg class="arrow-icon rtl-flip" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
@@ -338,26 +404,31 @@
                 </div>
                 <div class="story-card reveal" style="transition-delay: 0.3s;">
                     <div class="story-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80" alt="Success Story" class="story-img">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+                            alt="Success Story" class="story-img">
                         <div class="video-overlay">
                             <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
+                                <path d="M8 5v14l11-7z" />
                             </svg>
                         </div>
                         <span class="story-badge video-badge">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-left: 5px;">
-                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
+                                style="margin-left: 5px;">
+                                <path
+                                    d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
                             </svg>
                             فيديو
                         </span>
                     </div>
                     <div class="story-content">
                         <h3 data-translate="st_3_title">دعم المزارع المحلي</h3>
-                        <p data-translate="st_3_desc">مشروع تزويد المزارعين بالطاقة الشمسية ضاعف من إنتاجية المحاصيل وساهم في تحقيق الأمن الغذائي للمنطقة...</p>
+                        <p data-translate="st_3_desc">مشروع تزويد المزارعين بالطاقة الشمسية ضاعف من إنتاجية المحاصيل
+                            وساهم في تحقيق الأمن الغذائي للمنطقة...</p>
                         <a href="#" class="link-arrow">
-                            <span data-translate="watch_video">شاهد القصة</span> 
+                            <span data-translate="watch_video">شاهد القصة</span>
                             <svg class="arrow-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                             </svg>
                         </a>
                     </div>
@@ -371,9 +442,10 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-translate="sdg_title">تدخلاتنا المستدامة</h2>
-                <p data-translate="sdg_desc">نلتزم في مؤسسة نهد التنموية بمواءمة تدخلاتنا ومشاريعنا مع أهداف التنمية المستدامة (SDGs) التابعة للأمم المتحدة، مساهمةً منا في بناء مستقبل أفضل وأكثر استدامة للجميع.</p>
+                <p data-translate="sdg_desc">نلتزم في مؤسسة نهد التنموية بمواءمة تدخلاتنا ومشاريعنا مع أهداف التنمية
+                    المستدامة (SDGs) التابعة للأمم المتحدة، مساهمةً منا في بناء مستقبل أفضل وأكثر استدامة للجميع.</p>
             </div>
-            
+
             <div class="sdg-grid">
                 <!-- Goal 1 -->
                 <div class="sdg-card reveal" style="background-color: var(--sdg-1); transition-delay: 0.1s;">
@@ -384,7 +456,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_1">القضاء على الفقر</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 3L2 12h3v8h14v-8h3L12 3zm-2 15H8v-2h2v2zm0-4H8V9h2v5zm4 4h-2v-2h2v2zm0-4h-2V9h2v5z"/>
+                                <path
+                                    d="M12 3L2 12h3v8h14v-8h3L12 3zm-2 15H8v-2h2v2zm0-4H8V9h2v5zm4 4h-2v-2h2v2zm0-4h-2V9h2v5z" />
                             </svg>
                         </div>
                     </div>
@@ -403,7 +476,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_2">القضاء التام على الجوع</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22 10H2V9c0-2.76-2.24-5-5-5h10c2.76 0 5 2.24 5 5v1zm-3 2H5c-1.66 0-3 1.34-3 3v2c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5v-2c0-1.66-1.34-3-3-3z"/>
+                                <path
+                                    d="M22 10H2V9c0-2.76-2.24-5-5-5h10c2.76 0 5 2.24 5 5v1zm-3 2H5c-1.66 0-3 1.34-3 3v2c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5v-2c0-1.66-1.34-3-3-3z" />
                             </svg>
                         </div>
                     </div>
@@ -422,7 +496,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_3">الصحة الجيدة والرفاه</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
+                                <path
+                                    d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z" />
                             </svg>
                         </div>
                     </div>
@@ -441,13 +516,15 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_4">التعليم الجيد</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.09C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM11 18.49c-1.2-.4-2.8-.9-4.5-.9-1.6 0-3.3.3-4.5.8V7.3c1.2-.5 2.9-.8 4.5-.8 1.7 0 3.3.5 4.5 1v10.99zm9 .01c-1.2-.5-2.8-.8-4.5-.8-1.7 0-3.3.5-4.5.9V8.3c1.2-.4 2.8-.9 4.5-.9 1.6 0 3.3.3 4.5.8v10.3z"/>
+                                <path
+                                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.09C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM11 18.49c-1.2-.4-2.8-.9-4.5-.9-1.6 0-3.3.3-4.5.8V7.3c1.2-.5 2.9-.8 4.5-.8 1.7 0 3.3.5 4.5 1v10.99zm9 .01c-1.2-.5-2.8-.8-4.5-.8-1.7 0-3.3.5-4.5.9V8.3c1.2-.4 2.8-.9 4.5-.9 1.6 0 3.3.3 4.5.8v10.3z" />
                             </svg>
                         </div>
                     </div>
                     <div class="sdg-overlay">
                         <div class="sdg-overlay-content">
-                            <p data-translate="sdg_4_desc">بناء وتأهيل المدارس وتوفير الحقائب المدرسية وكفالة الطلاب.</p>
+                            <p data-translate="sdg_4_desc">بناء وتأهيل المدارس وتوفير الحقائب المدرسية وكفالة الطلاب.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -460,13 +537,15 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_5">المساواة بين الجنسين</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5l-5-2.5v5c0 2.76 2.24 5 5 5s5-2.24 5-5v-5l-5 2.5z"/>
+                                <path
+                                    d="M12 2L2 7l10 5 10-5-10-5zm0 7.5l-5-2.5v5c0 2.76 2.24 5 5 5s5-2.24 5-5v-5l-5 2.5z" />
                             </svg>
                         </div>
                     </div>
                     <div class="sdg-overlay">
                         <div class="sdg-overlay-content">
-                            <p data-translate="sdg_5_desc">تمكين المرأة اقتصادياً وتعليمياً للمشاركة الفاعلة في المجتمع.</p>
+                            <p data-translate="sdg_5_desc">تمكين المرأة اقتصادياً وتعليمياً للمشاركة الفاعلة في المجتمع.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -479,7 +558,7 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_6">المياه النظيفة والنظافة الصحية</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 20a6 6 0 01-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 01-6 6z"/>
+                                <path d="M12 20a6 6 0 01-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 01-6 6z" />
                             </svg>
                         </div>
                     </div>
@@ -498,7 +577,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_8">العمل اللائق ونمو الاقتصاد</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-4zM10 4h4v2h-4V4zm10 16H4V8h16v12z"/>
+                                <path
+                                    d="M16 6V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-4zM10 4h4v2h-4V4zm10 16H4V8h16v12z" />
                             </svg>
                         </div>
                     </div>
@@ -517,7 +597,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_10">الحد من أوجه عدم المساواة</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z" />
                             </svg>
                         </div>
                     </div>
@@ -536,7 +617,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_13">العمل المناخي</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                             </svg>
                         </div>
                     </div>
@@ -555,7 +637,8 @@
                         <div class="sdg-body">
                             <h3 data-translate="sdg_17">عقد الشراكات لتحقيق الأهداف</h3>
                             <svg class="sdg-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                                <path
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                             </svg>
                         </div>
                     </div>
@@ -574,39 +657,49 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-translate="media_title">المركز الإعلامي</h2>
-                <p data-translate="media_desc">تابع أحدث الأخبار والمشاريع والتقارير الدورية التي نصدرها لنبقى على تواصل شفاف معكم.</p>
+                <p data-translate="media_desc">تابع أحدث الأخبار والمشاريع والتقارير الدورية التي نصدرها لنبقى على تواصل
+                    شفاف معكم.</p>
             </div>
-            
+
             <div class="media-grid">
                 <div class="news-card reveal" style="transition-delay: 0.1s;">
-                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News" class="news-img">
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="News" class="news-img">
                     <div class="news-content">
                         <span class="news-date">15 May 2026</span>
                         <h3 data-translate="news_1_title">تدشين حملة توزيع السلال الغذائية الرمضانية</h3>
-                        <p data-translate="news_1_desc">بحضور السلطة المحلية، دشنت المؤسسة حملتها السنوية لتوزيع أكثر من 10,000 سلة غذائية...</p>
-                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i class="fa-solid fa-arrow-left arrow-icon"></i></a>
+                        <p data-translate="news_1_desc">بحضور السلطة المحلية، دشنت المؤسسة حملتها السنوية لتوزيع أكثر من
+                            10,000 سلة غذائية...</p>
+                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i
+                                class="fa-solid fa-arrow-left arrow-icon"></i></a>
                     </div>
                 </div>
                 <div class="news-card reveal" style="transition-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News" class="news-img">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="News" class="news-img">
                     <div class="news-content">
                         <span class="news-date">28 Apr 2026</span>
                         <h3 data-translate="news_2_title">توقيع اتفاقية شراكة مع منظمة دولية</h3>
-                        <p data-translate="news_2_desc">تم توقيع اتفاقية استراتيجية لدعم القطاع الصحي وتجهيز ثلاثة مستشفيات ريفية بالمعدات...</p>
-                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i class="fa-solid fa-arrow-left arrow-icon"></i></a>
+                        <p data-translate="news_2_desc">تم توقيع اتفاقية استراتيجية لدعم القطاع الصحي وتجهيز ثلاثة
+                            مستشفيات ريفية بالمعدات...</p>
+                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i
+                                class="fa-solid fa-arrow-left arrow-icon"></i></a>
                     </div>
                 </div>
                 <div class="news-card reveal" style="transition-delay: 0.3s;">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News" class="news-img">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="News" class="news-img">
                     <div class="news-content">
                         <span class="news-date">10 Apr 2026</span>
                         <h3 data-translate="news_3_title">اختتام برنامج تدريب المعلمين</h3>
-                        <p data-translate="news_3_desc">اختتمت المؤسسة برنامجا تدريبيا استهدف 200 معلم لرفع كفاءتهم في أساليب التعليم الحديثة...</p>
-                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i class="fa-solid fa-arrow-left arrow-icon"></i></a>
+                        <p data-translate="news_3_desc">اختتمت المؤسسة برنامجا تدريبيا استهدف 200 معلم لرفع كفاءتهم في
+                            أساليب التعليم الحديثة...</p>
+                        <a href="#" class="link-arrow"><span data-translate="media_more">المزيد من التفاصيل</span> <i
+                                class="fa-solid fa-arrow-left arrow-icon"></i></a>
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 40px;">
                 <a href="#" class="btn btn-primary" data-translate="media_btn">عرض كافة الأخبار</a>
             </div>
@@ -618,8 +711,10 @@
         <div class="container">
             <div class="cta-content">
                 <h2 data-translate="cta_title">تغيير حقيقي يبدأ بخطوة صغيرة</h2>
-                <p data-translate="cta_desc">مساهمتك مهما كانت بسيطة تصنع فارقاً كبيراً في حياة الكثيرين. انضم إلينا اليوم وكن جزءاً من مسيرة التنمية والإنسانية.</p>
-                <a href="#" class="btn btn-accent btn-lg" style="padding: 15px 40px; font-size: 1.2rem;" data-translate="cta_btn">تبرع الآن لدعم مشاريعنا</a>
+                <p data-translate="cta_desc">مساهمتك مهما كانت بسيطة تصنع فارقاً كبيراً في حياة الكثيرين. انضم إلينا
+                    اليوم وكن جزءاً من مسيرة التنمية والإنسانية.</p>
+                <a href="#" class="btn btn-accent btn-lg" style="padding: 15px 40px; font-size: 1.2rem;"
+                    data-translate="cta_btn">تبرع الآن لدعم مشاريعنا</a>
             </div>
         </div>
     </section>
@@ -627,32 +722,57 @@
     <!-- Partners Section -->
     <section class="partners-section">
         <div class="container">
-            <div class="section-header reveal" style="margin-bottom: 30px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="section-header reveal"
+                style="margin-bottom: 30px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <h2 data-translate="partners_title">شركاء الإنسانية</h2>
-                <p data-translate="partners_desc" style="color: #666; font-size: 1.1rem; margin-top: 15px;">نعتز بشراكاتنا الاستراتيجية مع نخبة من المنظمات والمؤسسات المحلية والدولية، لتوحيد الجهود وتعظيم الأثر الإنساني والتنموي.</p>
+                <p data-translate="partners_desc" style="color: #666; font-size: 1.1rem; margin-top: 15px;">نعتز
+                    بشراكاتنا الاستراتيجية مع نخبة من المنظمات والمؤسسات المحلية والدولية، لتوحيد الجهود وتعظيم الأثر
+                    الإنساني والتنموي.</p>
             </div>
             <div class="partners-tabs reveal">
-                <button class="partner-tab active" data-target="partners-intl" data-translate="ptab_intl">شركاء دوليين</button>
+                <button class="partner-tab active" data-target="partners-intl" data-translate="ptab_intl">شركاء
+                    دوليين</button>
                 <button class="partner-tab" data-target="partners-gov" data-translate="ptab_gov">شركاء حكوميين</button>
-                <button class="partner-tab" data-target="partners-local" data-translate="ptab_local">شركاء محليين</button>
+                <button class="partner-tab" data-target="partners-local" data-translate="ptab_local">شركاء
+                    محليين</button>
             </div>
         </div>
-        
+
         <!-- International Partners -->
         <div id="partners-intl" class="partners-slider active reveal">
             <div class="partners-track">
                 <!-- Group 1 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Partner Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Partner Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Partner Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Partner Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
                 <!-- Group 2 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Partner Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Partner Logo" class="partner-img"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png" alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Partner Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Partner Logo" class="partner-img"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778365674/FAO_logo_Blue_3lines_ar_1_jnjidi.png"
+                        alt="FAO Logo" class="partner-img"></div>
             </div>
         </div>
 
@@ -660,17 +780,37 @@
         <div id="partners-gov" class="partners-slider reveal" style="display: none;">
             <div class="partners-track" style="animation-direction: reverse;">
                 <!-- Group 1 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
                 <!-- Group 2 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Government Logo" class="partner-img" style="filter: hue-rotate(90deg);"></div>
             </div>
         </div>
 
@@ -678,17 +818,37 @@
         <div id="partners-local" class="partners-slider reveal" style="display: none;">
             <div class="partners-track">
                 <!-- Group 1 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
                 <!-- Group 2 -->
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
-                <div class="partner-card"><img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
+                <div class="partner-card"><img
+                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                        alt="Local Logo" class="partner-img" style="filter: hue-rotate(180deg);"></div>
             </div>
         </div>
     </section>
@@ -698,49 +858,74 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-translate="social_feeds_title">تابعنا على منصات التواصل</h2>
-                <p data-translate="social_feeds_desc">ابق على اطلاع دائم بآخر أخبارنا ونشاطاتنا عبر منصات التواصل الاجتماعي.</p>
+                <p data-translate="social_feeds_desc">ابق على اطلاع دائم بآخر أخبارنا ونشاطاتنا عبر منصات التواصل
+                    الاجتماعي.</p>
             </div>
-            
+
             <div class="feeds-grid">
                 <!-- Instagram Mock Feed -->
-                <div class="feed-container reveal ig-mockup" style="transition-delay: 0.1s; padding: 0; background: #fff; overflow: hidden; display: flex; flex-direction: column; border: 1px solid #dbdbdb;">
+                <div class="feed-container reveal ig-mockup"
+                    style="transition-delay: 0.1s; padding: 0; background: #fff; overflow: hidden; display: flex; flex-direction: column; border: 1px solid #dbdbdb;">
                     <!-- Header -->
-                    <div class="ig-header" style="padding: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dbdbdb; background: #fafafa;">
+                    <div class="ig-header"
+                        style="padding: 15px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dbdbdb; background: #fafafa;">
                         <div style="display: flex; align-items: center; gap: 12px;">
-                            <div style="width: 45px; height: 45px; border-radius: 50%; padding: 2px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
-                                <img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain; background: white; border: 1px solid white;">
+                            <div
+                                style="width: 45px; height: 45px; border-radius: 50%; padding: 2px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+                                <img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                                    style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain; background: white; border: 1px solid white;">
                             </div>
                             <div>
                                 <h4 style="margin: 0; font-size: 0.95rem; color: #262626; font-weight: 600;">ndf_ye</h4>
-                                <p style="margin: 0; font-size: 0.8rem; color: #8e8e8e;" data-translate="ig_subtitle">مؤسسة نهد التنموية</p>
+                                <p style="margin: 0; font-size: 0.8rem; color: #8e8e8e;" data-translate="ig_subtitle">
+                                    مؤسسة نهد التنموية</p>
                             </div>
                         </div>
-                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-btn" style="background: #0095f6; color: white; padding: 6px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.85rem;" data-translate="ig_btn">متابعة</a>
+                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-btn"
+                            style="background: #0095f6; color: white; padding: 6px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.85rem;"
+                            data-translate="ig_btn">متابعة</a>
                     </div>
                     <!-- Grid -->
-                    <div class="ig-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; padding: 2px; background: #fff;">
-                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post" style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i> 124</div>
+                    <div class="ig-grid"
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; padding: 2px; background: #fff;">
+                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post"
+                            style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i>
+                                124</div>
                         </a>
-                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post" style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
-                            <img src="https://images.unsplash.com/photo-1593113580332-ceb47bfbc974?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i> 89</div>
+                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post"
+                            style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
+                            <img src="https://images.unsplash.com/photo-1593113580332-ceb47bfbc974?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i> 89
+                            </div>
                         </a>
-                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post" style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
-                            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i> 215</div>
+                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post"
+                            style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
+                            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i>
+                                215</div>
                         </a>
-                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post" style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
-                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i> 342</div>
+                        <a href="https://www.instagram.com/ndf_ye?igsh=YXQ1MDVqemo2NDJp" target="_blank" class="ig-post"
+                            style="position: relative; aspect-ratio: 1; display: block; overflow: hidden; background: #f0f0f0;">
+                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <div class="ig-overlay"><i class="fa-solid fa-heart" style="margin-inline-end: 6px;"></i>
+                                342</div>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Facebook Feed -->
                 <div class="feed-container reveal" style="transition-delay: 0.2s;">
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNDFYE&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNDFYE&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                        width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>
@@ -754,11 +939,13 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="logo">
-                        <img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778194074/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_%D9%85%D9%81%D8%B1%D8%BA-%D9%A1_nx0gte.png" alt="NDF Logo" class="footer-logo-img">
+                        <img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778194074/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_%D9%85%D9%81%D8%B1%D8%BA-%D9%A1_nx0gte.png"
+                            alt="NDF Logo" class="footer-logo-img">
                     </div>
-                    <p data-translate="ft_about">منظمة مجتمع مدني غير ربحية تسعى لتمكين المجتمعات الضعيفة وبناء مجتمع متماسك وقادر على الصمود من خلال تدخلات تنموية مبنية على الاحتياج الحقيقي.</p>
+                    <p data-translate="ft_about">منظمة مجتمع مدني غير ربحية تسعى لتمكين المجتمعات الضعيفة وبناء مجتمع
+                        متماسك وقادر على الصمود من خلال تدخلات تنموية مبنية على الاحتياج الحقيقي.</p>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4 class="footer-title" data-translate="ft_links">روابط سريعة</h4>
                     <ul>
@@ -768,11 +955,12 @@
                         <li><a href="#" data-translate="ft_link_4">سياسة الخصوصية</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4 class="footer-title" data-translate="ft_contact">تواصل معنا</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> <span data-translate="ft_loc">حضرموت - المكلا</span></li>
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> <span
+                                data-translate="ft_loc">حضرموت - المكلا</span></li>
                         <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> info@ndf-ye.org</li>
                         <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +967 123 456 789</li>
                     </ul>
@@ -783,34 +971,83 @@
                     <div style="display: flex; gap: 15px; margin-top: 10px;">
                         <!-- X (Twitter) -->
                         <a href="#" class="social-link" title="X">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
                         </a>
                         <!-- Facebook -->
                         <a href="#" class="social-link" title="Facebook">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg>
                         </a>
                         <!-- Instagram -->
                         <a href="#" class="social-link" title="Instagram">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
                         </a>
                         <!-- LinkedIn -->
                         <a href="#" class="social-link" title="LinkedIn">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
                         </a>
                         <!-- YouTube -->
                         <a href="#" class="social-link" title="YouTube">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 00-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 002.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 00-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 002.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p data-translate="ft_copy">جميع الحقوق محفوظة &copy; 2026 مؤسسة نهد التنموية (NDF). UI/UX Abu Rayan.</p>
+                <p data-translate="ft_copy">جميع الحقوق محفوظة &copy; 2026 مؤسسة نهد التنموية (NDF). UI/UX Abu Rayan.
+                </p>
             </div>
         </div>
     </footer>
+    <!-- Floating AI Chatbot Widget -->
+    <div class="chatbot-widget">
+        <button id="chatbotToggle" class="chatbot-toggle-btn" aria-label="Open Chat">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 2C6.48 2 2 5.58 2 10c0 2.53 1.45 4.76 3.69 6.13-.19.88-.63 2.11-1.6 3.49.88-.13 2.37-.53 3.59-1.29A10.84 10.84 0 0012 18c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+            </svg>
+        </button>
+        <div id="chatbotWindow" class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10a9.96 9.96 0 01-5.17-1.44l-4.59 1.23 1.23-4.59A9.96 9.96 0 012 12C2 6.48 6.48 2 12 2zm0 2C7.58 4 4 7.58 4 12c0 1.58.46 3.06 1.25 4.31l-1.07 4.02 4.02-1.07A7.96 7.96 0 0012 20c4.42 0 8-3.58 8-8s-3.58-8-8-8zm-2 9a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
+                    </svg>
+                    <span data-translate="chat_title">المساعد الذكي NDF</span>
+                </div>
+                <button id="chatbotClose" class="chatbot-close-btn">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="chat-message bot-message">
+                    <p data-translate="chat_welcome">مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا..." data-translate-placeholder="chat_placeholder">
+                <button id="chatSend" class="chat-send-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -24,6 +24,19 @@
     --sdg-10: #DD1367;
     --sdg-13: #3F7E44;
     --sdg-17: #19486A;
+    --sdg-17: #19486A;
+}
+
+[data-theme="dark"] {
+    --primary-color: #05192d; /* Darker background for header/footer */
+    --secondary-color: #008f4c; 
+    --text-main: #e0e0e0;
+    --text-light: #a0a0a0;
+    --bg-light: #121212;
+    --white: #1e1e1e; /* Cards background */
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -278,6 +291,22 @@ header.scrolled .header-icon-btn {
 header.scrolled .header-icon-btn:hover {
     background: var(--accent-color);
     color: var(--white);
+}
+
+.theme-toggle-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 5px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+header.scrolled .theme-toggle-btn {
+    color: var(--accent-color);
 }
 
 /* Hero Section */
