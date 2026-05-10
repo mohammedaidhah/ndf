@@ -91,11 +91,15 @@ const translations = {
         "resp_impact": "Our Real-World Impact",
         "resp_impact_desc": "With a high rating in transparency and response speed, we are committed to maximizing the impact of every donation to alleviate suffering in the hardest-hit areas. Thanks to your support, we achieved immediate response for over 500,000 beneficiaries last year.",
         "partners_title": "Partners in Humanity",
+        "partners_desc": "We take pride in our strategic partnerships with leading local and international organizations, uniting efforts to maximize humanitarian and developmental impact.",
         "partner_un": "UN Agencies",
         "partner_ksrelief": "KSrelief",
         "partner_directaid": "Direct Aid Society",
         "partner_global": "Global Relief Agencies",
         "partner_local": "Local Development Partners",
+        "ptab_intl": "International Partners",
+        "ptab_gov": "Government Partners",
+        "ptab_local": "Local Partners",
         "ig_desc": "Follow us on Instagram to see the latest photos and stories from the field.",
         "ig_btn": "Follow Account"
     },
@@ -191,11 +195,15 @@ const translations = {
         "resp_impact": "أثرنا على أرض الواقع",
         "resp_impact_desc": "من خلال تصنيف عالي في معايير الشفافية وسرعة الاستجابة، نحن ملتزمون بتعظيم أثر كل تبرع يصلنا لتخفيف المعاناة في المناطق الأشد تضرراً. بفضل دعمكم، حققنا استجابة فورية لأكثر من 500,000 مستفيد خلال العام الماضي.",
         "partners_title": "شركاء الإنسانية",
+        "partners_desc": "نعتز بشراكاتنا الاستراتيجية مع نخبة من المنظمات والمؤسسات المحلية والدولية، لتوحيد الجهود وتعظيم الأثر الإنساني والتنموي.",
         "partner_un": "منظمات الأمم المتحدة",
         "partner_ksrelief": "مركز الملك سلمان للإغاثة",
         "partner_directaid": "جمعية العون المباشر",
         "partner_global": "هيئات الإغاثة العالمية",
         "partner_local": "شركاء التنمية المحليين",
+        "ptab_intl": "شركاء دوليين",
+        "ptab_gov": "شركاء حكوميين",
+        "ptab_local": "شركاء محليين",
         "ig_desc": "تابعنا على انستقرام لمشاهدة أحدث الصور والقصص من الميدان.",
         "ig_btn": "متابعة الحساب"
     }
@@ -378,6 +386,36 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 if (navMenu.classList.contains('active')) {
                     toggleMenu();
+                }
+            });
+        });
+    }
+
+    // 7. Partners Tabs Toggle
+    const partnerTabs = document.querySelectorAll('.partner-tab');
+    const partnerSliders = document.querySelectorAll('.partners-slider');
+
+    if (partnerTabs.length > 0 && partnerSliders.length > 0) {
+        partnerTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                partnerTabs.forEach(t => t.classList.remove('active'));
+                // Add active to clicked tab
+                tab.classList.add('active');
+
+                // Hide all sliders
+                partnerSliders.forEach(slider => {
+                    slider.style.display = 'none';
+                    slider.classList.remove('active');
+                });
+
+                // Show target slider
+                const targetId = tab.getAttribute('data-target');
+                const targetSlider = document.getElementById(targetId);
+                if (targetSlider) {
+                    targetSlider.style.display = 'block';
+                    // small timeout for CSS transition if any
+                    setTimeout(() => targetSlider.classList.add('active'), 10);
                 }
             });
         });
