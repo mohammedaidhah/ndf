@@ -302,6 +302,16 @@ document.addEventListener('DOMContentLoaded', () => {
             langText.textContent = lang === 'ar' ? 'EN' : 'AR';
         }
 
+        // Update logo based on layout direction
+        const mainLogo = document.getElementById('main-logo');
+        if (mainLogo) {
+            if (lang === 'en') {
+                mainLogo.src = 'https://res.cloudinary.com/dca2x8jje/image/upload/v1778407726/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_%D9%85%D9%81%D8%B1%D8%BA-%D8%B9%D8%B1%D8%B6%D9%8A_%D9%8A%D8%B3%D8%A7%D8%B1_xxdpg6.png';
+            } else {
+                mainLogo.src = 'https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png';
+            }
+        }
+
         // Translate text elements
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
