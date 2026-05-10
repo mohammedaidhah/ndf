@@ -101,7 +101,10 @@ const translations = {
         "ptab_gov": "Government Partners",
         "ptab_local": "Local Partners",
         "ig_desc": "Follow us on Instagram to see the latest photos and stories from the field.",
-        "ig_btn": "Follow Account"
+        "ig_btn": "Follow Account",
+        "chat_title": "NDF AI Assistant",
+        "chat_welcome": "Hello! How can I help you today?",
+        "chat_placeholder": "Type your message here..."
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -320,6 +323,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Translate placeholders
+        document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-translate-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                el.setAttribute('placeholder', translations[lang][key]);
+            }
+        });
+
         // Swap arrow direction classes
         document.querySelectorAll('.arrow-icon').forEach(icon => {
             if(lang === 'en') {
@@ -457,6 +468,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => targetSlider.classList.add('active'), 10);
                 }
             });
+        });
+    }
+
+    // 10. Chatbot Toggle Logic
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatbotClose = document.getElementById('chatbotClose');
+
+    if (chatbotToggle && chatbotWindow && chatbotClose) {
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('active');
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
         });
     }
 });
