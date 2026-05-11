@@ -396,64 +396,94 @@ header.scrolled .theme-toggle-btn {
     gap: 20px;
 }
 
-/* Impact Section - Enhanced */
+/* Impact Section - Enhanced Two Cards Layout */
 .impact-section {
-    padding: 60px 0;
-    background-color: var(--primary-color);
-    color: var(--white);
     position: relative;
     z-index: 20;
-    margin-top: -60px;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
-    background-image: radial-gradient(circle at 10% 20%, rgba(0, 168, 89, 0.1) 0%, transparent 40%),
-                      radial-gradient(circle at 90% 80%, rgba(0, 168, 89, 0.1) 0%, transparent 40%);
+    margin-top: -60px; /* Pull up to overlap hero */
+    padding: 0 15px; /* Added padding to prevent cards from touching screen edges on mobile */
 }
 
-.impact-grid {
+.impact-cards-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    text-align: center;
+    margin: 0 auto;
 }
 
-.impact-item {
-    position: relative;
+.impact-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 15px 20px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.impact-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: -15px;
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.impact-icon {
-    font-size: 2.8rem;
-    color: var(--secondary-color);
-    margin: 10px 0;
-    opacity: 0.9;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-
-.impact-item h3 {
-    font-size: 3.5rem;
+.impact-card-icon {
+    width: 65px;
+    height: 65px;
+    background-color: var(--accent-color);
     color: var(--white);
-    margin-bottom: 5px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: block;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -32px;
+    border: 4px solid var(--bg-light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
-.impact-item p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 500;
+.impact-card:hover .impact-card-icon {
+    background-color: var(--secondary-color);
+}
+
+.impact-card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.impact-stat {
+    text-align: center;
+    width: 100%;
+}
+
+.impact-stat p {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.impact-stat h3 {
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+[data-theme="dark"] .impact-card {
+    background: var(--white);
+    border-color: #333;
+}
+
+[data-theme="dark"] .impact-card-icon {
+    border-color: var(--bg-light);
 }
 
 /* Sectors Section */
@@ -1519,8 +1549,7 @@ html[dir="rtl"] .partners-slider::after {
 /* Responsive */
 @media (max-width: 992px) {
     .hero h1 { font-size: 3rem; }
-    .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-    .impact-item:nth-child(2)::after { display: none; }
+    .impact-cards-wrapper { grid-template-columns: repeat(2, 1fr); gap: 50px 30px; }
     .response-content { flex-direction: column; gap: 40px; }
     .response-chart-wrapper { width: 100%; justify-content: center; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1622,8 +1651,7 @@ html[dir="rtl"] .partners-slider::after {
     .hero h1 { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; }
     .impact-section { margin-top: 0; border-radius: 0; }
-    .impact-grid { grid-template-columns: 1fr; gap: 30px; }
-    .impact-item::after { display: none !important; }
+    .impact-cards-wrapper { grid-template-columns: 1fr; gap: 50px; }
     .footer-grid { grid-template-columns: 1fr; }
     
     .sdg-grid {
