@@ -14,71 +14,89 @@
 
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Modern Floating Header -->
     <header id="header">
-        <div class="container navbar">
-            <div class="logo">
-                <a href="#">
-                    <img id="main-logo"
-                        src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
-                        alt="NDF Logo" class="logo-img">
-                </a>
-            </div>
-
-            <!-- Mobile Menu Overlay -->
-            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
-            <div class="nav-menu" id="navMenu">
-                <ul class="nav-links">
-                    <li><a href="#" data-translate="nav_home">الرئيسية</a></li>
-                    <li><a href="#" data-translate="nav_about">عن المؤسسة</a></li>
-                    <li><a href="#" data-translate="nav_sectors">قطاعات العمل</a></li>
-                    <li><a href="#" data-translate="nav_projects">مشاريعنا</a></li>
-                    <li><a href="#" data-translate="nav_media">المركز الإعلامي</a></li>
-                    <li><a href="#" data-translate="nav_contact">اتصل بنا</a></li>
-                </ul>
-
-                <div class="mobile-donate" style="display: none; width: 100%; margin-top: 20px;">
-                    <a href="#" class="btn btn-accent" style="width: 100%; text-align: center; display: block;"><i
-                            class="fa-solid fa-heart"></i> <span data-translate="nav_donate">تبرع الآن</span></a>
+        <div class="container header-container">
+            <!-- Header Top: Utilities & Action Buttons -->
+            <div class="header-top">
+                <div class="top-left">
+                    <a href="#" class="top-link-capsule">
+                        <svg viewBox="0 0 576 512" width="20" height="20" fill="currentColor" style="margin-inline-end: 8px;">
+                            <path d="M148 76.6C148 34.3 182.3 0 224.6 0c20.3 0 39.8 8.1 54.1 22.4L288 31.7l9.3-9.3C311.5 8.1 331.1 0 351.4 0C393.7 0 428 34.3 428 76.6c0 21.4-8.7 41.9-24.1 56.8l-104.4 101c-6.3 6.1-16.3 6.1-22.6 0l-104.4-101C156.7 118.5 148 98 148 76.6zM568.2 336.1c-13.1-17.8-36-21.9-54.1-9.1l-161.7 114.6c-2.3 1.6-5.1 2.5-8 2.5l-204.3 0c-3.1 0-6.1-1.1-8.5-3.1l-111-92.5c-15.3-12.7-38.1-10.5-50.8 4.8s-10.5 38.1 4.8 50.8l111 92.5c14.3 11.9 32.1 18.5 50.5 18.5l209.2 0c17.2 0 33.9-5.4 47.8-15.3l161.7-114.6c18.1-12.8 22.2-35.8 9.1-54.1z"/>
+                        </svg>
+                        <span data-translate="top_volunteer">تطوع معنا</span>
+                    </a>
+                </div>
+                
+                <div class="top-right">
+                    <div class="utility-actions">
+                        <button id="langToggle" class="capsule-toggle">
+                            <span class="lang-text" data-translate="lang_btn">English</span>
+                        </button>
+                        
+                        <div class="icon-actions">
+                            <button id="themeToggle" class="circle-action-btn" aria-label="Toggle Dark Mode">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                                </svg>
+                            </button>
+                            
+                            <a href="#" class="circle-action-btn login-trigger" aria-label="Login">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="nav-actions">
-                <button id="langToggle" class="header-icon-btn">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path
-                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.84-3.56A15.65 15.65 0 007.54 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.34.16-2h4.68c.09.66.16 1.32.16 2s-.07 1.34-.16 2zm1.8 2h2.95a7.987 7.987 0 01-3.84 3.56A15.65 15.65 0 0016.14 16zm2.95-8h-2.95c-.32-1.25-.78-2.45-1.38-3.56A7.987 7.987 0 0119.09 8zM19.74 14h-3.38c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2z" />
-                    </svg>
-                    <span class="lang-text" data-translate="lang_btn">EN</span>
-                </button>
-                <a href="#" class="btn btn-accent desktop-donate">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
-                        style="margin-left: 5px; vertical-align: middle;">
-                        <path
-                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                    </svg>
-                    <span data-translate="nav_donate">تبرع الآن</span>
-                </a>
-                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
-                    </svg>
-                </button>
+            <!-- Header Main: Logo & Navigation -->
+            <div class="header-main">
+                <div class="logo">
+                    <a href="#">
+                        <img id="main-logo"
+                            src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778276253/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_-_%D9%85%D9%81%D8%B1%D8%BA_-_%D8%B9%D8%B1%D8%B6%D9%8A_zpwch7.png"
+                            alt="NDF Logo" class="logo-img">
+                    </a>
+                </div>
 
-                <!-- Mobile Menu Toggle Button -->
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <svg class="icon-bars" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                    </svg>
-                    <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"
-                        style="display: none;">
-                        <path
-                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-                    </svg>
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#" data-translate="nav_home">الرئيسية</a></li>
+                        <li><a href="#" data-translate="nav_about">عن المؤسسة</a></li>
+                        <li><a href="#" data-translate="nav_sectors">قطاعات العمل</a></li>
+                        <li><a href="#" data-translate="nav_projects">مشاريعنا</a></li>
+                        <li><a href="#" data-translate="nav_media">المركز الإعلامي</a></li>
+                        <li><a href="#" data-translate="nav_contact">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-cta">
+                    <a href="#" class="btn btn-accent donate-capsule">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-inline-end: 8px;">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span data-translate="nav_donate">تبرع الآن</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Toggle Button -->
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <svg class="icon-bars" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                        </svg>
+                        <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"
+                            style="display: none;">
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     </header>
 
     <!-- Hero Section -->
