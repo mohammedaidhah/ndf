@@ -107,7 +107,26 @@ const translations = {
         "ig_btn": "Follow Account",
         "chat_title": "NDF AI Assistant",
         "chat_welcome": "Hello! How can I help you today?",
-        "chat_placeholder": "Type your message here..."
+        "chat_placeholder": "Type your message here...",
+        "projects_title": "Sustainable Impact Projects",
+        "projects_desc": "We showcase our leading developmental projects that have made a real and sustainable difference in the lives of the communities we serve.",
+        "p1_name": "Nahd Charitable Medical Complex",
+        "p2_name": "Student Scholarship Program",
+        "p3_name": "Renewable Energy for Farmers",
+        "p4_name": "Solar Artesian Wells",
+        "p_target_general": "Vulnerable Families",
+        "p_target_students": "University Students",
+        "p_target_farmers": "Small Farmers",
+        "p_target_villages": "Remote Area Residents",
+        "p_loc_hadramout": "Hadhramaut",
+        "p_loc_shabwa": "Shabwa",
+        "p_loc_mareb": "Ma'rib",
+        "p_loc_multiple": "Various Governorates",
+        "p5_name": "Operating Room Equipment at Al-Qatn Hospital",
+        "p_target_patients": "Needy Patients",
+        "p_ben_suffix": "Beneficiary",
+        "p_ben_farm_suffix": "Farm",
+        "view_details": "Project Details"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -214,11 +233,30 @@ const translations = {
         "ptab_gov": "شركاء حكوميين",
         "ptab_local": "شركاء محليين",
         "ig_desc": "تابعنا على انستقرام لمشاهدة أحدث الصور والقصص من الميدان.",
-        "ig_btn": "متابعة الحساب"
+        "ig_btn": "متابعة الحساب",
+        "projects_title": "مشاريع الأثر المستدام",
+        "projects_desc": "نستعرض هنا نخبة من مشاريعنا التنموية التي أحدثت فارقاً حقيقياً ومستداماً في حياة المجتمعات التي نخدمها.",
+        "p1_name": "مجمع نهد الطبي الخيري",
+        "p2_name": "برنامج كفالة طالب العلم",
+        "p3_name": "مشروع الطاقة المتجددة للمزارعين",
+        "p4_name": "حفر آبار ارتوازية بالطاقة الشمسية",
+        "p_target_general": "الأسر الأشد احتياجاً",
+        "p_target_students": "طلاب الجامعات",
+        "p_target_farmers": "صغار المزارعين",
+        "p_target_villages": "سكان المناطق النائية",
+        "p_loc_hadramout": "حضرموت",
+        "p_loc_shabwa": "شبوة",
+        "p_loc_mareb": "مأرب",
+        "p_loc_multiple": "عدة محافظات",
+        "p5_name": "تجهيز غرف العمليات بمستشفى القطن",
+        "p_target_patients": "المرضى المحتاجين",
+        "p_ben_suffix": "مستفيد",
+        "p_ben_farm_suffix": "مزرعة",
+        "view_details": "تفاصيل المشروع"
     }
 };
 
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = localStorage.getItem('lang') || 'ar';
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Header
@@ -490,5 +528,55 @@ document.addEventListener('DOMContentLoaded', () => {
         chatbotClose.addEventListener('click', () => {
             chatbotWindow.classList.remove('active');
         });
+    }
+
+    // 11. Projects Slider Logic
+    const projectsSlider = document.getElementById('projectsSlider');
+    const prevBtn = document.getElementById('prevProject');
+    const nextBtn = document.getElementById('nextProject');
+    const sliderProgressBar = document.getElementById('sliderProgressBar');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (projectsSlider && projectCards.length > 0) {
+        
+        const updateProgressBar = () => {
+            if (!sliderProgressBar) return;
+            const scrollLeft = Math.abs(projectsSlider.scrollLeft);
+            const maxScroll = projectsSlider.scrollWidth - projectsSlider.clientWidth;
+            const progress = (scrollLeft / maxScroll) * 100;
+            sliderProgressBar.style.width = `${progress}%`;
+        };
+
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = projectCards[0].offsetWidth + 15;
+            projectsSlider.scrollBy({ 
+                left: document.documentElement.dir === 'rtl' ? -cardWidth : cardWidth, 
+                behavior: 'smooth' 
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = projectCards[0].offsetWidth + 15;
+            projectsSlider.scrollBy({ 
+                left: document.documentElement.dir === 'rtl' ? cardWidth : -cardWidth, 
+                behavior: 'smooth' 
+            });
+        });
+
+        projectsSlider.addEventListener('scroll', updateProgressBar);
+        window.addEventListener('resize', updateProgressBar);
+        updateProgressBar();
+
+        // Interactive background effect
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.addEventListener('mousemove', (e) => {
+                const rect = projectsSection.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                projectsSection.style.setProperty('--mouse-x', `${x}%`);
+                projectsSection.style.setProperty('--mouse-y', `${y}%`);
+            });
+        }
     }
 });

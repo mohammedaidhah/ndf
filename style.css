@@ -2073,3 +2073,283 @@ html[dir="rtl"] .chat-send-btn svg {
         left: -10px;
     }
 }
+
+/* Projects Slider Section */
+.projects-slider-section {
+    padding: 100px 0;
+    background: #0f172a; /* Solid fallback */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+    position: relative;
+    overflow: visible;
+}
+
+.projects-slider-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 163, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.projects-slider-section .section-header h2 {
+    color: var(--white);
+}
+
+.projects-slider-section .section-header p {
+    color: rgba(255,255,255,0.7);
+}
+
+.slider-wrapper {
+    position: relative;
+    margin-top: 60px;
+}
+
+.projects-slider {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 40px 10% 60px 10%; /* Increased side padding for peek effect */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+[dir="rtl"] .projects-slider {
+    padding: 40px 50px 60px 0;
+}
+
+.projects-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.project-card {
+    flex: 0 0 calc((100% - 100px) / 5); /* Fit 5 cards with gaps */
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.project-img-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img-container img {
+    transform: scale(1.1);
+}
+
+.project-sector-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+[dir="ltr"] .project-sector-badge {
+    right: auto;
+    left: 15px;
+}
+
+.project-card[data-sector="health"] .project-sector-badge { background: #e91e63; }
+.project-card[data-sector="education"] .project-sector-badge { background: #2196f3; }
+.project-card[data-sector="food"] .project-sector-badge { background: #4caf50; }
+.project-card[data-sector="water"] .project-sector-badge { background: #00bcd4; }
+
+.project-body {
+    padding: 20px;
+}
+
+.project-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1a1a1a; /* Dark text for white cards */
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.project-meta-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* More compact */
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #555555; /* Gray text */
+    padding: 4px 0;
+}
+
+.meta-label {
+    display: none;
+}
+
+.meta-value {
+    font-weight: 500;
+    color: #333333;
+}
+
+.meta-icon {
+    width: 18px;
+    height: 18px;
+    color: #888888; /* Gray icons */
+    flex-shrink: 0;
+}
+
+.project-btn {
+    width: 100%;
+    padding: 12px;
+    background: #7c4dff; /* Purple like the image */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.project-btn:hover {
+    background: #651fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 77, 255, 0.3);
+}
+
+.slider-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 10%;
+}
+
+[dir="rtl"] .slider-nav {
+    flex-direction: row-reverse; /* Buttons on left, Progress on right */
+}
+
+[dir="ltr"] .slider-nav {
+    flex-direction: row; /* Buttons on left, Progress on right */
+}
+
+.nav-buttons-left {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.slider-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.slider-btn.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.slider-progress-container {
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.slider-progress-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+[dir="ltr"] .slider-progress-bar {
+    right: auto;
+    left: 0;
+}
+
+/* End of Projects Slider Styles */
+
+@media (max-width: 1200px) {
+    .project-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+    .slider-nav {
+        left: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 85%;
+    }
+    .slider-nav {
+        display: none;
+    }
+}
