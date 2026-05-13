@@ -138,7 +138,17 @@ const translations = {
         "login_google": "Login with Google",
         "login_no_account": "Don't have an account?",
         "login_signup": "Sign Up Now",
-        "login_quote": "We create impact.. we build people"
+        "login_quote": "We create impact.. we build people",
+        "media_all": "All",
+        "media_news": "News",
+        "media_reports": "Reports",
+        "media_pubs": "Publications",
+        "media_videos": "Video Library",
+        "media_all": "All",
+        "media_news": "News",
+        "media_reports": "Reports",
+        "media_pubs": "Publications",
+        "media_videos": "Video Library"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -276,7 +286,17 @@ const translations = {
         "login_google": "تسجيل الدخول مع Google",
         "login_no_account": "ليس لديك حساب؟",
         "login_signup": "التسجيل الآن",
-        "login_quote": "نصنع الأثر.. ونبني الإنسان"
+        "login_quote": "نصنع الأثر.. ونبني الإنسان",
+        "media_all": "الكل",
+        "media_news": "الأخبار",
+        "media_reports": "التقارير",
+        "media_pubs": "الإصدارات",
+        "media_videos": "مكتبة الفيديو",
+        "media_all": "الكل",
+        "media_news": "الأخبار",
+        "media_reports": "التقارير",
+        "media_pubs": "الإصدارات",
+        "media_videos": "مكتبة الفيديو"
     }
 };
 
@@ -660,6 +680,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (icon) {
                     icon.classList.toggle('fa-eye');
                     icon.classList.toggle('fa-eye-slash');
+                }
+            });
+        }
+    }
+
+    // 13. Media Center Filtering & Slider
+    const mediaTabs = document.querySelectorAll('.media-tab');
+    const mediaCards = document.querySelectorAll('.media-card');
+    const mediaProgressBar = document.querySelector('.media-progress-bar');
+    const mediaPrevBtn = document.querySelector('.media-nav-btn.prev');
+    const mediaNextBtn = document.querySelector('.media-nav-btn.next');
+
+    if (mediaTabs.length > 0 && mediaCards.length > 0) {
+        mediaTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                mediaTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                mediaCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    card.classList.remove('fade-in');
+                    void card.offsetWidth;
+
+                    if (filter === 'all' || filter === category) {
+                        card.classList.remove('hide');
+                        card.classList.add('fade-in');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+
+                // Update progress bar based on filter
+                if (mediaProgressBar) {
+                    const total = mediaCards.length;
+                    const width = (visibleCount / total) * 100;
+                    mediaProgressBar.style.width = `${Math.max(width, 20)}%`;
+                }
+            });
+        });
+
+        // Simple Nav Button Feedback
+        if (mediaPrevBtn && mediaNextBtn) {
+            mediaNextBtn.addEventListener('click', () => {
+                if (mediaProgressBar) {
+                    mediaProgressBar.style.right = 'auto';
+                    mediaProgressBar.style.left = '0';
+                }
+            });
+            mediaPrevBtn.addEventListener('click', () => {
+                if (mediaProgressBar) {
+                    mediaProgressBar.style.left = 'auto';
+                    mediaProgressBar.style.right = '0';
                 }
             });
         }
