@@ -1294,6 +1294,70 @@
             </div>
         </div>
     </footer>
+    <!-- Login Modal (Premium Split Design) -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-overlay"></div>
+        <div class="login-modal-content">
+            <button id="closeLogin" class="close-login-btn" aria-label="Close Modal">&times;</button>
+            <div class="login-split">
+                <!-- Left Side: Login Card Area -->
+                <div class="login-form-container">
+                    <div class="login-card">
+                        <div class="login-header">
+                            <img src="https://res.cloudinary.com/dca2x8jje/image/upload/v1778194074/%D8%B4%D8%B9%D8%A7%D8%B1%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9_%D9%85%D9%81%D8%B1%D8%BA-%D9%A1_nx0gte.png" alt="NDF Logo" class="login-card-logo">
+                            <h2 data-translate="login_title">تسجيل الدخول إلى حسابك</h2>
+                            <p data-translate="login_subtitle">مرحباً بك مجدداً في مؤسسة نهد التنموية</p>
+                        </div>
+
+                        <form class="login-form-element">
+                            <div class="login-input-group">
+                                <label data-translate="login_email_label">ادخل بريدك الإلكتروني</label>
+                                <div class="input-with-icon">
+                                    <input type="text" placeholder="اسم المستخدم" required>
+                                </div>
+                            </div>
+
+                            <div class="login-input-group">
+                                <label data-translate="login_password_label">ادخل كلمة المرور</label>
+                                <div class="input-with-icon">
+                                    <button type="button" class="pass-toggle-left" id="toggleLoginPass">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </button>
+                                    <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                                </div>
+                                <div class="forgot-wrapper">
+                                    <a href="#" class="forgot-link" data-translate="login_forgot">هل نسيت كلمة المرور؟</a>
+                                </div>
+                            </div>
+
+                            <div class="login-form-utils">
+                                <label class="remember-me-check">
+                                    <input type="checkbox">
+                                    <span data-translate="login_remember">تذكرني</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-login-submit" data-translate="login_btn">تسجيل الدخول</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Side: Branded Image -->
+                <div class="login-image-container" style="background-image: url('https://res.cloudinary.com/dca2x8jje/image/upload/v1778661061/%D8%A7%D9%84%D8%A3%D8%B6%D8%A7%D8%AD%D9%8A_yhrajw.jpg');">
+                    <div class="login-image-overlay">
+                        <a href="#" class="back-home-link-overlay login-trigger-close" data-translate="login_back_home">
+                            <span>العودة للرئيسية</span>
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                        <div class="overlay-bottom-content">
+                            <h3 data-translate="login_quote">نصنع الأثر.. ونبني الإنسان</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating AI Chatbot Widget -->
     <div class="chatbot-widget">
         <button id="chatbotToggle" class="chatbot-toggle-btn" aria-label="Open Chat">

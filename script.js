@@ -126,7 +126,19 @@ const translations = {
         "p_target_patients": "Needy Patients",
         "p_ben_suffix": "Beneficiary",
         "p_ben_farm_suffix": "Farm",
-        "view_details": "Project Details"
+        "view_details": "Project Details",
+        "login_title": "Login to Your Account",
+        "login_subtitle": "Welcome back to Nahd Developmental Foundation",
+        "login_email_label": "Enter your email or username",
+        "login_password_label": "Enter your password",
+        "login_remember": "Remember me",
+        "login_forgot": "Forgot your password?",
+        "login_btn": "Login",
+        "login_apple": "Login with Apple",
+        "login_google": "Login with Google",
+        "login_no_account": "Don't have an account?",
+        "login_signup": "Sign Up Now",
+        "login_quote": "We create impact.. we build people"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -252,7 +264,19 @@ const translations = {
         "p_target_patients": "المرضى المحتاجين",
         "p_ben_suffix": "مستفيد",
         "p_ben_farm_suffix": "مزرعة",
-        "view_details": "تفاصيل المشروع"
+        "view_details": "تفاصيل المشروع",
+        "login_title": "سجل الدخول لحسابك",
+        "login_subtitle": "مرحباً بك مجدداً في مؤسسة نهد التنموية",
+        "login_email_label": "ادخل بريدك الإلكتروني أو اسم المستخدم",
+        "login_password_label": "ادخل كلمة المرور",
+        "login_remember": "تذكرني",
+        "login_forgot": "هل نسيت كلمة المرور؟",
+        "login_btn": "تسجيل الدخول",
+        "login_apple": "تسجيل الدخول مع Apple",
+        "login_google": "تسجيل الدخول مع Google",
+        "login_no_account": "ليس لديك حساب؟",
+        "login_signup": "التسجيل الآن",
+        "login_quote": "نصنع الأثر.. ونبني الإنسان"
     }
 };
 
@@ -582,6 +606,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 const y = ((e.clientY - rect.top) / rect.height) * 100;
                 projectsSection.style.setProperty('--mouse-x', `${x}%`);
                 projectsSection.style.setProperty('--mouse-y', `${y}%`);
+            });
+        }
+    }
+
+    // 12. Login Modal Logic
+    const loginModal = document.getElementById('loginModal');
+    const loginTriggers = document.querySelectorAll('.login-trigger');
+    const closeLogin = document.getElementById('closeLogin');
+    const loginOverlay = document.querySelector('.login-modal-overlay');
+    const toggleLoginPass = document.getElementById('toggleLoginPass');
+    const loginPassword = document.getElementById('loginPassword');
+
+    if (loginModal && loginTriggers.length > 0) {
+        loginTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            });
+        });
+
+        const hideLogin = () => {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        if (closeLogin) closeLogin.addEventListener('click', hideLogin);
+        if (loginOverlay) loginOverlay.addEventListener('click', hideLogin);
+
+        // Add back to home link trigger
+        const closeTriggers = document.querySelectorAll('.login-trigger-close');
+        closeTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                hideLogin();
+            });
+        });
+
+        // Escape to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && loginModal.classList.contains('active')) {
+                hideLogin();
+            }
+        });
+
+        // Password Toggle
+        if (toggleLoginPass && loginPassword) {
+            toggleLoginPass.addEventListener('click', () => {
+                const type = loginPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+                loginPassword.setAttribute('type', type);
+                const icon = toggleLoginPass.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-eye');
+                    icon.classList.toggle('fa-eye-slash');
+                }
             });
         }
     }
