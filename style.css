@@ -196,8 +196,8 @@ header.scrolled {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 137, 123, 0.2);
+    backdrop-filter: blur(10px);
     padding: 6px 16px;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -224,7 +224,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 137, 123, 0.2);
     color: var(--white);
     padding: 6px 16px;
     border-radius: 50px;
@@ -525,8 +525,20 @@ header.scrolled .mobile-menu-toggle {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(13, 59, 102, 0.85) 0%, rgba(13, 59, 102, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(0, 77, 64, 0.7) 0%, rgba(5, 25, 45, 0.4) 100%);
     z-index: 2;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    opacity: 0.04;
+    pointer-events: none;
 }
 
 @keyframes kenBurns {
@@ -1480,8 +1492,7 @@ html[dir="rtl"] .partners-slider::after {
 
 /* Footer */
 footer {
-    background: #031424;
-    background: radial-gradient(circle at 80% 20%, #0c3e5a 0%, #031424 100%);
+    background: linear-gradient(135deg, #006d5f 0%, #004d40 50%, #05192d 100%);
     color: var(--white);
     padding: 80px 0 30px;
     position: relative;
@@ -1525,11 +1536,10 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.05;
+    opacity: 0.03;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 20c15 0 25 15 25 30s-10 30-25 30-25-15-25-30 10-30 25-30z M45 40c-5 0-8 5-8 10s3 10 8 10s8-5 8-10-3-10-8-10z M55 45c5 0 8 5 8 10s-3 10-8 10s-8-5-8-10 3-10 8-10z' fill='%23008080'/%3E%3C/svg%3E");
+    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
     background-repeat: repeat;
-    background-size: 150px;
 }
 
 footer .container {
@@ -2184,11 +2194,26 @@ html[dir="rtl"] .chat-send-btn svg {
 /* Projects Slider Section */
 .projects-slider-section {
     padding: 60px 0;
-    background: #0f172a;
-    background: radial-gradient(circle at 20% 30%, #164e63 0%, #0f172a 70%);
+    background: linear-gradient(135deg, #006d5f 0%, #004d40 50%, #05192d 100%);
     color: #ffffff;
     position: relative;
     overflow: hidden;
+}
+
+/* Clear technical grid pattern */
+.projects-slider-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .section-bg-waves {
@@ -2379,20 +2404,20 @@ html[dir="rtl"] .chat-send-btn svg {
 .project-btn {
     width: 100%;
     padding: 10px;
-    background: #7c4dff; /* Purple like the image */
+    background: var(--secondary-color);
     color: white;
     border: none;
-    border-radius: 10px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: auto;
+    box-shadow: 0 4px 10px rgba(0, 168, 89, 0.2);
 }
 
 .project-btn:hover {
-    background: #651fff;
+    background: #008c4a;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(124, 77, 255, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 168, 89, 0.3);
 }
 
 .slider-nav {
