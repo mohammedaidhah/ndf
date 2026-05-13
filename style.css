@@ -1006,6 +1006,22 @@ html[dir="ltr"] .rtl-flip {
     background-color: var(--bg-light);
     border-radius: 50%;
     box-shadow: inset 0 5px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-center-logo {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+}
+
+.donut-chart:hover .chart-center-logo {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .chart-labels {
