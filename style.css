@@ -35,6 +35,12 @@
 }
 
 .reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* No-JS fallback or slow JS fallback */
+.no-js .reveal {
     opacity: 1;
     transform: translateY(0);
 }
@@ -2528,10 +2534,13 @@ html[dir="rtl"] .chat-send-btn svg {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background: transparent; /* Overlay handles the background */
+    pointer-events: none; /* Only allow clicks when active */
 }
 
 .login-modal.active {
     display: flex;
+    pointer-events: auto;
 }
 
 .login-modal-overlay {
@@ -3189,4 +3198,191 @@ html[dir="rtl"] .chat-send-btn svg {
     opacity: 0.3;
     cursor: not-allowed;
 }
+
+/* Interactive Yemen Map Section */
+.impact-map-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.map-wrapper {
+    position: relative;
+    max-width: 1000px; /* Increased for better presence */
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle at center, rgba(0, 137, 123, 0.05) 0%, transparent 70%);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+#yemen-map-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.08));
+    transition: transform 0.5s ease;
+}
+
+.gov-path {
+    fill: #e2e8f0;
+    stroke: var(--white);
+    stroke-width: 1.2;
+    stroke-linejoin: round;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+[data-theme="dark"] .gov-path {
+    fill: #2d3748;
+    stroke: #1a202c;
+}
+
+.gov-active {
+    fill: rgba(0, 137, 123, 0.15); 
+    stroke: var(--accent-color);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+
+[data-theme="dark"] .gov-active {
+    fill: rgba(0, 137, 123, 0.25);
+    stroke: var(--accent-color);
+}
+
+.gov-active:hover {
+    fill: var(--primary-color) !important; /* Dark turquoise */
+    stroke: var(--primary-color);
+    transform: scale(1.01) translateY(-2px);
+    filter: drop-shadow(0 10px 20px rgba(0, 109, 95, 0.2));
+    z-index: 10;
+}
+
+/* Tooltip Styling */
+.map-tooltip {
+    position: absolute;
+    background: var(--white);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    border-right: 5px solid var(--secondary-color);
+    min-width: 200px;
+    transform: translate(-50%, -100%) translateY(-20px);
+    color: var(--text-main);
+}
+
+.map-tooltip.active {
+    opacity: 1;
+    transform: translate(-50%, -100%) translateY(-10px);
+}
+
+.tooltip-gov-name {
+    display: block;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.tooltip-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.map-legend {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px;
+    background: var(--white);
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .map-legend {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.legend-color.active { 
+    background-color: rgba(0, 137, 123, 0.2); 
+    border: 2px solid var(--accent-color); 
+}
+
+.legend-color.inactive { 
+    background-color: #f1f5f9; 
+    border: 2px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+    .impact-map-section { padding: 80px 0; }
+    .map-wrapper { padding: 15px; }
+    .map-legend { 
+        flex-direction: column; 
+        gap: 15px; 
+        border-radius: 25px;
+        padding: 20px;
+    }
+}
+
+/* Dark Mode Specific Overrides for Map Section */
+[data-theme="dark"] .impact-map-section {
+    background-color: var(--bg-light);
+}
+
+[data-theme="dark"] .map-wrapper {
+    background: radial-gradient(circle at center, rgba(0, 137, 123, 0.15) 0%, transparent 80%);
+}
+
+[data-theme="dark"] .map-legend {
+    background: var(--white);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .legend-item {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .map-tooltip {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-right-color: var(--accent-color);
+}
+
+[data-theme="dark"] .tooltip-gov-name {
+    color: var(--accent-color);
+}
+
 

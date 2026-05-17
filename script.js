@@ -148,7 +148,33 @@ const translations = {
         "media_news": "News",
         "media_reports": "Reports",
         "media_pubs": "Publications",
-        "media_videos": "Video Library"
+        "media_videos": "Video Library",
+        "map_title": "Developmental Intervention Map",
+        "map_desc": "The scope of our projects and interventions across the Republic's governorates.",
+        "map_active": "Intervention Governorate",
+        "map_inactive": "Future Expansion Scope",
+        "YE-HD": "Hadramout",
+        "YE-SH": "Shabwah",
+        "YE-MR": "Al Mahrah",
+        "YE-SU": "Socotra",
+        "YE-AD": "Aden",
+        "YE-AB": "Abyan",
+        "YE-LA": "Lahj",
+        "YE-DA": "Ad Dhale'e",
+        "YE-MA": "Marib",
+        "YE-TA": "Taiz",
+        "YE-HU": "Al Hudaydah",
+        "YE-SN": "Sana'a",
+        "YE-SD": "Saada",
+        "YE-HJ": "Hajjah",
+        "YE-AM": "Amran",
+        "YE-MW": "Al Mahwit",
+        "YE-DH": "Dhamar",
+        "YE-RA": "Raymah",
+        "YE-IB": "Ibb",
+        "YE-BA": "Al Bayda",
+        "YE-JA": "Al Jawf",
+        "YE-SA": "Amanat Al Asimah"
     },
     ar: {
         "nav_home": "الرئيسية",
@@ -296,14 +322,44 @@ const translations = {
         "media_news": "الأخبار",
         "media_reports": "التقارير",
         "media_pubs": "الإصدارات",
-        "media_videos": "مكتبة الفيديو"
+        "media_videos": "مكتبة الفيديو",
+        "map_title": "خارطة التدخلات التنموية",
+        "map_desc": "نطاق انتشار مشاريعنا وتدخلاتنا في مختلف محافظات الجمهورية.",
+        "map_active": "محافظة تدخل",
+        "map_inactive": "نطاق التوسع المستقبلي",
+        "YE-HD": "حضرموت",
+        "YE-SH": "شبوة",
+        "YE-MR": "المهرة",
+        "YE-SU": "سقطرى",
+        "YE-AD": "عدن",
+        "YE-AB": "أبين",
+        "YE-LA": "لحج",
+        "YE-DA": "الضالع",
+        "YE-MA": "مأرب",
+        "YE-TA": "تعز",
+        "YE-HU": "الحديدة",
+        "YE-SN": "صنعاء",
+        "YE-SD": "صعدة",
+        "YE-HJ": "حجة",
+        "YE-AM": "عمران",
+        "YE-MW": "المحويت",
+        "YE-DH": "ذمار",
+        "YE-RA": "ريمة",
+        "YE-IB": "إب",
+        "YE-BA": "البيضاء",
+        "YE-JA": "الجوف",
+        "YE-SA": "أمانة العاصمة"
     }
 };
 
 let currentLang = localStorage.getItem('lang') || 'ar';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Sticky Header
+    // Remove no-js class immediately
+    document.body.classList.remove('no-js');
+    
+    try {
+        // 1. Sticky Header
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -358,14 +414,12 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(impactSection);
     }
 
-    // 3. Scroll Reveal Animation
-    const reveals = document.querySelectorAll('.reveal');
-
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         const elementVisible = 150;
+        const revealElements = document.querySelectorAll('.reveal');
 
-        reveals.forEach(reveal => {
+        revealElements.forEach(reveal => {
             const elementTop = reveal.getBoundingClientRect().top;
             if (elementTop < windowHeight - elementVisible) {
                 reveal.classList.add('active');
@@ -375,6 +429,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Trigger once on load
+    
+    // Safety fallback: Reveal everything if still hidden after 3 seconds
+    setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    }, 3000);
 
     // 4. Language Translation Logic
     const langToggleBtns = document.querySelectorAll('.lang-toggle-btn');
@@ -587,7 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderProgressBar = document.getElementById('sliderProgressBar');
     const projectCards = document.querySelectorAll('.project-card');
 
-    if (projectsSlider && projectCards.length > 0) {
+    if (projectsSlider && projectCards.length > 0 && prevBtn && nextBtn) {
         
         const updateProgressBar = () => {
             if (!sliderProgressBar) return;
@@ -739,5 +798,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+    }
+
+    // 14. Yemen Map Interactivity
+    const mapSvg = document.getElementById('yemen-map-svg');
+    const mapTooltip = document.getElementById('mapTooltip');
+    const govPaths = document.querySelectorAll('.gov-path');
+
+    if (mapSvg && mapTooltip) {
+        govPaths.forEach(path => {
+            path.addEventListener('mouseenter', (e) => {
+                const govId = path.getAttribute('id');
+                const isIntervention = path.classList.contains('gov-active');
+                
+                // Update tooltip content
+                const govName = translations[currentLang][govId] || govId;
+                mapTooltip.querySelector('.tooltip-gov-name').textContent = govName;
+                
+                const statusText = isIntervention ? 
+                    translations[currentLang]['map_active'] : 
+                    translations[currentLang]['map_inactive'];
+                
+                mapTooltip.querySelector('.status-text').textContent = statusText;
+                mapTooltip.querySelector('.status-indicator').style.backgroundColor = isIntervention ? 'var(--secondary-color)' : '#cbd5e1';
+                
+                mapTooltip.classList.add('active');
+            });
+
+            path.addEventListener('mousemove', (e) => {
+                const rect = mapSvg.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                mapTooltip.style.left = `${x}px`;
+                mapTooltip.style.top = `${y}px`;
+            });
+
+            path.addEventListener('mouseleave', () => {
+                mapTooltip.classList.remove('active');
+            });
+        });
+    }
+    } catch (error) {
+        console.error("NDF Script Error:", error);
+        // Emergency reveal in case of error
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
     }
 });
