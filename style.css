@@ -468,6 +468,10 @@ header.scrolled .mobile-menu-toggle {
     visibility: visible;
 }
 
+.mobile-menu-utility {
+    display: none;
+}
+
 .nav-links a {
     color: var(--white);
     font-weight: 500;
